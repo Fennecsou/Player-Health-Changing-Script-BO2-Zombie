@@ -1,5 +1,5 @@
 # Player-Health-Changing-Script-BO2-Zombie
-This gsc script change health of the player in BO2 Zombie
+This gsc script change health of the player in BO2 Zombie to value closer to these of BO3 health value
 
 !!! Instalation Tutorial !!!
 
