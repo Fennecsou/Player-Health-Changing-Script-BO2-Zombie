@@ -15,4 +15,4 @@ Zombies deal 60 damage, so 150hp = 3 hits and 250hp = 4 to 5 hits.
 You can set the value you want, but it won't change the health Jugger-nog give you will need another script for that and i don't know how to increase health of Jugger-nog =(.
 
 
-Know issue : in solo when getting revived by quick revive your health come back to a 100 :(
+Known issue : in solo when getting revived by quick revive your health come back to a 100 :(
