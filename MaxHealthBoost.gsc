@@ -23,7 +23,7 @@ onplayerspawned()
     {
         self waittill( "spawned_player" );
         self IPrintLnBold( "Max Health Boosted From 100hp to 150hp" );
-		self.maxhealth=150;
+		self.maxhealth=650;
         self.health=self.maxhealth;
     }
 }
