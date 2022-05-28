@@ -1,29 +1,37 @@
+#include common_scripts\utility;
+#include maps\mp\_utility;
+
 init()
 {
- 	level thread onplayerconnect();
+	level thread onPlayerConnect();
 }
 
-onplayerconnect()
+onPlayerConnect()
 {
-	for ( ;; )
+	for(;;)
 	{
-		level waittill( "connecting", player );
-		player thread onplayerspawned();
+		level waittill("connected", player);
+		player thread onPlayerSpawned();
 	}
 }
 
-onplayerspawned()
+onPlayerSpawned()
 {
-	level endon( "game_ended" );
-    self endon( "disconnect" );
+	self endon("disconnect");
+	level endon("game_ended");
+	level endon("end_game");
 
-    	self.initial_spawn = true;
+	self.initial_spawn = true;
 
-    for(;;)
-    {
-        self waittill( "spawned_player" );
-        self IPrintLnBold( "Max Health Boosted From 100hp to 150hp" );
+	self waittill("spawned_player");
+	self IPrintLnBold( "Max Health Boosted From 100hp to 150hp" );
+	self.maxhealth=150;
+	self.health=self.maxhealth;
+
+	for(;;)
+	{
+		self waittill( "player_revived" );
 		self.maxhealth=150;
-        self.health=self.maxhealth;
-    }
+		self.health=self.maxhealth;
+	}
 }
